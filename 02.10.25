@@ -1,0 +1,18 @@
+from math import radians, factorial
+
+x_char = radians(60)
+
+eps = 0.0001
+
+summ_char = 0
+
+current_part_char = 1
+
+n_char = 0
+
+while abs(current_part_char) > eps:
+   summ_char += current_part_char
+   n_char += 1
+   current_part_char = ((-1) ** n_char) * ((x_char ** (2 * n_char)) / factorial(2 * n_char))
+   
+print(f"Печенька = ответ: {summ_char}")

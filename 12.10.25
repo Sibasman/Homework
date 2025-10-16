@@ -1,3 +1,4 @@
+№хот фикс 16.10.25
 import math
 
 def binary(list_value, target_value, l_value = 0, r_value = None):
@@ -68,11 +69,11 @@ try:
         #алгоритм бинарного поиска, на выходе программа должна
         #вывести позицию искомого элемента в исходном списке.
         
-        list = [1, 24, 45, 23, 10, 3, 3, 7, 9, 10]
+        list = [1, 24, 45, 23, 10, 3, 8, 7, 9, 10]
         list_sort = sorted(list)
-        target = int(input())
+        print(f"Ваш список состоит из нескольких чисел: {list_sort}")
+        target = int(input("Введите какое число хотите найти в списке: "))
 
-        print(f"Итоговый отсортированный список: {list_sort}")
         print(f"Нужное значение нахоидться на: {binary(list_sort, target)} месте")
         
     elif number == 2:
@@ -117,5 +118,4 @@ try:
         
 except ValueError:
     print("Некоректно задано значение")
-    
     

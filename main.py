@@ -1,2 +1,2 @@
 data = input()
-print(data)
+print(data+2)

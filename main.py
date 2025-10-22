@@ -1,2 +1,2 @@
-print("Пельмени?")
-print("Банан?")
+data = input()
+print(data)

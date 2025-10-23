@@ -51,3 +51,4 @@ try:
 except (ValueError, MemoryError) as error:
     print(f"Произошла ошибка: {type(error).__name__}")
     print(f"Описание ошибки: {error}")
+

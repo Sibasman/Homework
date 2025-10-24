@@ -10,6 +10,8 @@ for i_x in range(matrix_x):
         matrix_row.append(random.randrange(0, 6, 2))
     matrix.append(matrix_row)
 
+    print("Пропишите stopчто бы завершить игрую")
+
 while True:
     
     for row in matrix:

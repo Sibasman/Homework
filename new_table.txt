@@ -1,0 +1,43 @@
+create table Emloyess (
+    id serial primary key,
+    name_person varchar(100),
+    gender_person varchar(10),
+    year_person integer,
+    specialization_person varchar(100),
+    salary_person integer
+);
+
+insert into Emloyess (name_person, gender_person, year_person, specialization_person, salary_person)
+values
+	('Сангвиний', 'Мужской', 230, 'Примарх', 2000000),
+	('Парвос Грэнум', 'Мужской', 2000, 'Начальник', 20000),
+	('Кларк Кент', 'Мужской', 35, 'Офисный рабочий', 9000),
+	('Питер Паркер', 'Мужской', 15, 'Фотограф', 6500),
+    ('Сидрович', 'Мужской', 45, 'Торговец', 5300),
+	('Михаил Калашников', 'Мужской', 28, 'Торговец', 5300),
+	('Вильям Афтон', 'Мужской', 30, 'Инжинер', 4900),
+    ('Доминик Торетто', 'Мужской', 47, 'Слесарь', 4300),
+    ('Спидвагон', 'Мужской', 25, 'Джентельмен', 3000),
+    ('Аска Лэнгли', 'Женский', 14, 'Пилот', 100);
+
+update Emloyess set specialization_person = 'Фермер' where name_person = 'Кларк Кент';
+update Emloyess set specialization_person = 'Гонщик' where name_person = 'Доминик Торетто';
+
+alter table Emloyess add column hire_date_person integer default 0;
+
+update Emloyess
+set hire_date_person = 2010 + case
+    when id % 2 = 0 then 2
+    else 4
+end;
+
+select * from Emloyess where specialization_person = 'Начальник';
+
+select * from Emloyess where salary_person >= 5000;
+
+select * from Emloyess where specialization_person = 'Торговец';
+
+select sum(salary_person) as total_salary
+from Emloyess
+
+drop table Emloyess
